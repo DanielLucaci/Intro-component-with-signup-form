@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);; 
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body { 
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--red);
+    padding: 120px 150px;  
+}
+
+body::after { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/bg-intro-desktop.png');
+}
+
+
+.main {
+    width: 100%;
+    max-width: 1050px;
+    display: flex;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.title {
+    color: white;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.description { 
+    color: white;
+    font-weight: 400px;
+    font-size: 14px;
+    line-height: 1.4rem;
+}
+
+.right {
+    flex: 1;
+}
+
+/* Attribution */
+.attribution { 
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
