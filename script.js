@@ -1,5 +1,7 @@
 const form = document.querySelector('form');
 
+console.log(window.innerHeight);
+
 const inputElements = [
     // First Name
     {
@@ -73,7 +75,6 @@ const onChangeHandler = (inputElement) => {
 
 
 // Event Listeners
-
 inputElements.forEach(element => {
     element.input.addEventListener('input', () => {
         if(element.hasError === true) { 
@@ -103,4 +104,8 @@ form.addEventListener('submit', (e) => {
             inputElement.hasError = true;
         } 
     });
+})
+
+window.addEventListener('resize', () => {
+    console.log(window.innerWidth);
 })
